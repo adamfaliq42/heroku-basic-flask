@@ -142,7 +142,7 @@ $ python --version
 Python 3.5.1 :: Anaconda 2.5.0 (x86_64)
 ~~~
 
-Since Heroku does not support Python 3.5.1, we need to download either Python 3.6.4 or 3.6.6. In this tuturial, we will use Python 3.6.6. Download it [here](https://www.python.org/downloads/release/python-366/). 
+Since Heroku does not support Python 3.5.1, we need to download either Python 3.6.4 or 3.6.6. In this tutorial, we will use Python 3.6.6. You can download it here [here](https://www.python.org/downloads/release/python-366/). 
 
 Next, we will start a virtual environment for Python 3.6.6 using virtualenv. If you have not installed virtualenv, install it with the following command.
 
@@ -371,8 +371,7 @@ You need to create an entirely new repo on Github, e.g.
 
       https://github.com/your_username/fun_flask_app
 
-
-Which will result in these instructions:
+Go to your GitHub home page, log in and click __Start a Project__. When you have done creating a new project, you will see these instructions:
 
 > ### …or push an existing repository from the command line
 >
