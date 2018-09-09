@@ -1,4 +1,6 @@
+### Motivation
 
+I have forked this repository from a blessed soul, [datademofun](https://github.com/datademofun/heroku-basic-flask). I tried reading the official Heroku documentation and other tutorials but could not understand them. After following [datademodun](https://github.com/datademofun/heroku-basic-flask)'s tutorial, the deployment process worked like charm. In this version, I have made few changes in the __runtime.txt__ section. I have used Python 3.6.6 and virtualenv as Heroku only supports that runtime version as of the time of writing (September 2018).
 
 ### tl;dr 
 
@@ -7,7 +9,6 @@ A walkthrough on how to get set up with Heroku and its toolkit and then how to d
 To see a more advanced Flask app that uses USGS data and Google APIs, checkout this repo: [datademofun/heroku-flask-quakes-lesssimple](https://github.com/datademofun/heroku-flask-quakes-lesssimple)
 
 This is a long README of the steps, but all the actual code and configuration for this app is included in this repo. You can copy and deploy it through your own Heroku account.
-
 
 # Deploying a simple Flask app to the cloud via Heroku
 
