@@ -132,7 +132,7 @@ gunicorn
 
 ## Specifying Python version with `runtime.txt`
 
-Heroku will know that we be running a Python app, but because there's a huge disparity between Python versions (notably, [Python 2 versus 3](https://wiki.python.org/moin/Python2orPython3)), we need to tell Heroku to use the Python version that we're using on our own computer to develop our app.
+Heroku will know that we be running a Python app, but because there's a huge disparity between Python versions (notably, [Python 2 versus 3](https://wiki.python.org/moin/Python2orPython3)), we need to tell Heroku to use the Python version that we're using on our own computer to develop our app. As of the time of writing (September 2018), Heroku only support Python 3.6.4 and 3.6.4.
 
 Which version of Python are we/you running? From your command line, run the Python interpreter with the `--version` flag:
 
@@ -141,13 +141,42 @@ $ python --version
 Python 3.5.1 :: Anaconda 2.5.0 (x86_64)
 ~~~
 
-Nevermind that `"Anaconda"` bit -- we just need the version number, e.g. __3.5.1__
+Since Heroku does not support Python 3.5.1, we need to download either Python 3.6.4 or 3.6.6. In this tuturial, we will use Python 3.6.6. Download it [here](https://www.python.org/downloads/release/python-366/). 
 
+Next, we will start a virtual environment for Python 3.6.6 using virtualenv. If you have not installed virtualenv, install it with the following command.
+
+~~~sh
+$pip3 install virtualenv
+~~~
+
+Create a virtual environment using virtualenv
+
+~~~sh
+$virtualenv --python=<path/to/python3.6.6/> <path/to/new/virtualenv/>
+~~~
+
+For example:
+~~~sh
+$virtualenv --python=/usr/bin/python3.6.6 venv
+~~~
+
+Here, we have created a virtualenv folder called __venv__ which runs Python3.6.6. Please note that the path to Python3.6.6 executable in your computer might be different.
+
+Now run the virtualenvironment.
+~~~sh
+$source venv/bin/activate
+~~~
+
+Check the version to make sure it is Python 3.6.6.
+~~~sh
+$python --version
+Python 3.6.6
+~~~
 
 Create __runtime.txt__ in your root app folder and add just the single line (note: replace my example version number with yours, if it is different):
 
 ~~~sh
-python-3.5.1
+python-3.6.6
 ~~~
 
 ## Create a `Procfile`
